@@ -1,7 +1,3 @@
-Given /^I am on zappos\.com$/ do
-  visit('/')
-end
-
 Given /^I am shopping for men\'s shoes$/ do
   find(:xpath, "/html/body/div[5]/div[11]/div[1]/div[2]/div/a[2]").click
 end
