@@ -11,7 +11,7 @@ Given /^I am shopping for athletic men\'s shoes$/ do
 end
 
 Given /^I am shopping for this brand "([^"]*)"$/ do |term|
-  find(:xpath, "//*[@id='FCTbrandnamefacetSelect']/a[65]").click
+  find_link("Inov-8").click
 end
 
 Given /^I am shopping for this model "([^"]*)"$/ do |term|
