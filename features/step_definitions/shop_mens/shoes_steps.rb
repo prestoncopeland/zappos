@@ -5,11 +5,11 @@ Given /^I navigate until I\'m choosing a specific men\'s athletic shoe$/ do
 end
 
 Given /^I am shopping for men\'s shoes$/ do
-  find(:xpath, "/html/body/div[5]/div[11]/div[1]/div[2]/div/a[2]").click
+  find(:xpath, $shop_mens_shoes).click
 end
 
 Given /^I am shopping for athletic men\'s shoes$/ do
-  find(:xpath, "/html/body/div[5]/div[12]/div[1]/div[2]/div/a[1]").click
+  find(:xpath, $shop_mens_athletic_shoes).click
 end
 
 Given /^I am shopping for this brand "([^"]*)"$/ do |term|

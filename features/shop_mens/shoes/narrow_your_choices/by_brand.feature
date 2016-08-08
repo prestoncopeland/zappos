@@ -2,6 +2,7 @@ Feature: Shopping for Men's Shoes By Brand
 
 Scenario: Adding to cart without choosing size
 
+Given I have set up my shop men's links
 Given I navigate until I'm choosing a specific men's athletic shoe
 Given I am shopping for this brand "Inov-8"
 Given I am shopping for this model "F-Lite™ 250"
