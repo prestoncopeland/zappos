@@ -1,3 +1,9 @@
+Given /^I navigate until I\'m choosing a specific men\'s athletic shoe$/ do
+  step "I am on zappos\.com"
+  step "I am shopping for men\'s shoes"
+  step "I am shopping for athletic men\'s shoes"
+end
+
 Given /^I am shopping for men\'s shoes$/ do
   find(:xpath, "/html/body/div[5]/div[11]/div[1]/div[2]/div/a[2]").click
 end
