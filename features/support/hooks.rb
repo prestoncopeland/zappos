@@ -1,2 +1,2 @@
-Capybara.app_host = "http://google.com"
+Capybara.app_host = "http://zappos.com"
 Capybara.default_driver = :selenium
