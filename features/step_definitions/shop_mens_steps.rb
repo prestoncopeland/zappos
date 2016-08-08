@@ -45,5 +45,3 @@ When /^I fill in the Notify Me form with this email "([^"]*)"$/ do |test_email|
     expect(page).to have_content("We'll send you an email at #{test_email} if the following combination becomes available:")
   end
 end
-
-

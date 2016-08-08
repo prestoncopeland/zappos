@@ -20,4 +20,3 @@ Given I am shopping for this model "F-Lite™ 250"
 When I click Don't see your size?
 Then the Notify Me popup should appear
 When I fill in the Notify Me form with this email "namely_test@gmail.com"
-
