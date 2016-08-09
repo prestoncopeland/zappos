@@ -10,3 +10,7 @@ end
 Given /^I am shopping for this brand "([^"]*)"$/ do |term|
   find_link(term).click
 end
+
+Then /^the item should be added to the cart$/ do
+  expect(page).to have_content("You have 1 item in your shopping cart")
+end

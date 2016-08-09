@@ -4,6 +4,13 @@ Given /^I navigate until I\'m choosing a specific men\'s athletic shoe$/ do
   step "I am shopping for athletic men\'s shoes"
 end
 
+Given /^I have chosen a specific men\'s athletic shoe$/ do
+  step "I have set up my shop men\'s links"
+  step "I navigate until I\'m choosing a specific men\'s athletic shoe"
+  step "I am shopping for this brand \"Inov-8\""
+  step "I am shopping for this model \"F-Lite™ 250\""
+end
+
 Given /^I am shopping for men\'s shoes$/ do
   find(:xpath, $shop_mens_shoes).click
 end
@@ -14,6 +21,14 @@ end
 
 Given /^I am shopping for this model "([^"]*)"$/ do |term|
   find(:xpath, '//*[@id="searchResults"]/a[21]').click
+end
+
+When /^I choose a size$/ do
+  page.select "UK 8 (US Men's 9)", :from => "dimensionValues"
+end
+
+When /^I click Add to Cart$/ do
+  find_button("addToCart").click
 end
 
 When /^I attempt to add the model "([^"]*)" to the cart without selecting size$/ do |model|
