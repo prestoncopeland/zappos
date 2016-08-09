@@ -43,6 +43,21 @@ When /^I click Don\'t see your size\?$/ do
   find("#notifyMePopupLink").click
 end
 
+When /^I click Cancel on the Notify Me popup$/ do
+  within_window(->{ page.title == "Zappos.com - Notify Me!" }) do
+    find_button("Cancel").click
+  end
+end
+
+Given /^I have accessed the Notify Me popup$/ do
+  step "I click Don\'t see your size\?"
+  step "the Notify Me popup should appear"
+end
+
+Then /^the Notify Me popup should disappear$/ do
+  expect(page).to_not have_content("Just enter your email address below and we\'ll let you know when the combination you are looking for becomes available!")
+end
+
 Then /^the Notify Me popup should appear$/ do
   within_window(->{ page.title == "Zappos.com - Notify Me!" }) do
     expect(page).to have_content("NOTIFY ME!")

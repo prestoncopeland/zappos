@@ -18,3 +18,10 @@ Given I am shopping for this model "F-Lite™ 250"
 When I click Don't see your size?
 Then the Notify Me popup should appear
 When I fill in the Notify Me form with this email "namely_test@gmail.com"
+
+Scenario: User can leave Notify Me popup without submitting
+
+Given I have chosen a specific men's athletic shoe
+Given I have accessed the Notify Me popup
+When I click Cancel on the Notify Me popup
+Then the Notify Me popup should disappear
