@@ -12,10 +12,6 @@ Given /^I am shopping for athletic men\'s shoes$/ do
   find(:xpath, $shop_mens_athletic_shoes).click
 end
 
-Given /^I am shopping for this brand "([^"]*)"$/ do |term|
-  find_link("Inov-8").click
-end
-
 Given /^I am shopping for this model "([^"]*)"$/ do |term|
   find(:xpath, '//*[@id="searchResults"]/a[21]').click
 end
